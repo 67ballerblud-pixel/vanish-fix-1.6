@@ -1,0 +1,26 @@
+# Shown when a player types a vanished player's name in a command (matches your server's own message)
+not-online-message: "&cPlayer not online."
+
+# Friends/follow join & leave alerts ("Friends » X joined the game.").
+# The formats must match UltimateDonutSmp's FRIENDS.JOIN_BROADCAST / QUIT_BROADCAST etc. in your language file.
+follow-alerts:
+  enabled: true
+  join-format: "&a&lFriends &8» &f{player} &7joined the game."
+  quit-format: "&a&lFriends &8» &f{player} &7left the game."
+  online-format: "&a&lFriends &8» &7online followed players: &f{players}"
+  online-none-format: "&a&lFriends &8» &7none of the players you follow are currently online."
+
+# The /friends menu: show vanished players as Offline to everyone who can't see vanished players.
+friends-menu:
+  enabled: true
+  online-word: "Online"     # the word UltimateDonutSmp shows for online players
+  offline-word: "Offline"
+
+block-commands:
+  # Treat vanished players as offline in typed commands (/msg, /tpa, /pay, ...)
+  enabled: true
+  # How many words after the command to check for a vanished name.
+  # 2 covers /msg <player> <text>, /tpa <player>, /pay <player> <amount> and /pay <amount> <player>
+  args-to-check: 2
+  # Commands (no slash) that are never blocked
+  exempt-commands: []
